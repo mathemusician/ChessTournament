@@ -15,12 +15,13 @@ private:
 public:
     Tournament();
     Tournament(bool, string, string);
-    // make contstructor?
+    // make constructor?
     // make destructor
+    void setActive(bool);
     void setName(string);
     void setDate(string);
-    bool isActive();
     string getName(); // -- get name of tournament
+    bool isActive();
     string getDate();
     string getResults();
 };

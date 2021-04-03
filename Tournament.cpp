@@ -16,6 +16,11 @@ Tournament::Tournament(bool Active, string Name, string Date) {
 };
 // make contstructor?
 // make destructor
+
+void Tournament::setActive(bool Active) {
+    active = Active;
+};
+
 void Tournament::setName(string Name) {
     name = Name;
 };
