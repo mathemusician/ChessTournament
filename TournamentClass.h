@@ -12,18 +12,21 @@ private:
     // vector <int> vectorGames; // Change to vector of Games in the future
 
 public:
+    // TODO: make constructor? destructor
     Tournament();
     Tournament(string, string);
     Tournament(bool, string, string);
-    // make constructor?
-    // make destructor
+    // Setters
     void setActive(bool);
     void setName(string);
     void setDate(string);
+    // Getters
     string getName(); // -- get name of tournament
     bool isActive();
     string getDate();
     string getResults();
+    // Special
+    void checkActive();
 };
 
 #endif

@@ -58,7 +58,23 @@ string Tournament::getDate() {
     return date;
 }
 
-string getResults() {
+string Tournament::getResults() {
     // TODO: make results
     return "results pending...";
+}
+
+// #----------Special----------#
+
+void Tournament::checkActive() {
+    if ((firstPlayer != "") and (secondPlayer != "") and (result != "")) {
+        active = true; // sanity check
+        cout << "Note: a Game was activated since assignment of players and result" << endl;
+    }
+
+    if (((firstPlayer == "") or (secondPlayer == "") or (result == "")) && active == true) {
+        active = false;
+        cout << "Note: a Game was inactivated since assignment of players and/or result is blank" << endl;
+    }
+
+
 }
