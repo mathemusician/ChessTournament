@@ -64,7 +64,7 @@ string Tournament::getResults() {
 // #----------Special----------#
 
 void Tournament::checkActive() {
-    if ((name != "") and (date != "")) {
+    if ((name != "") and (date != "") and (active != true)) {
         active = true; // sanity check
         cout << "Note: a Tournament was activated since assignment of name and date" << endl;
     }

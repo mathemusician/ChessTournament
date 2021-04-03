@@ -67,7 +67,7 @@ string Game::getResult() {
 // #----------Special----------#
 
 void Game::checkActive() {
-    if ((firstPlayer != "") and (secondPlayer != "") and (result != "")) {
+    if ((firstPlayer != "") and (secondPlayer != "") and (result != "") and (active != true)) {
         active = true; // sanity check
         cout << "Note: a Game was activated since assignment of players and result" << endl;
     }

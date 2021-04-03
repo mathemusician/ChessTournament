@@ -100,10 +100,15 @@ string Player::getRating(string) {
 
 void Player::checkActive() {
 
-    if ((firstName != "") and (lastName != "") and (rating != "")) {
+    if ((firstName != "") and (lastName != "") and schoolOrClubExists() and validRating() and (active != true)) {
         active = true; // sanity check
-        cout << "Note: a Game was activated since assignment of players and result" << endl;
+        cout << "Note: a Game was activated since assignment of name, ELO, and/or school or club of origin" << endl;
     } // sanity check
+
+    if (((firstName == "") or (lastName == "") or (rating == "") or not schoolOrClubExists() or not validRating()) && active == true) {
+        active = false;
+        cout << "Note: a Game was inactivated since assignment of name, ELO, and/or school or club of origin is blank" << endl;
+    }
 }
 
 bool Player::schoolOrClubExists() {
@@ -115,8 +120,25 @@ bool Player::schoolOrClubExists() {
 }
 
 bool Player::validRating() {
+    int ratingCap = 2700;
     if (rating != "") {
-        return true;
+        if (rating == "unrated") {
+            return true;
+        } else {
+            
+            try {
+                int intRating = stoi(rating);
+                if (0 <= intRating < ratingCap) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } catch(const std::exception& e) {
+                cout << "rating is greater than rating cap: " << ratingCap << endl;
+                /* std::cerr << e.what() << '\n'; */
+            }
+            
+        }
     } else {
         return false;
     }
