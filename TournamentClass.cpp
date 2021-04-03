@@ -66,14 +66,14 @@ string Tournament::getResults() {
 // #----------Special----------#
 
 void Tournament::checkActive() {
-    if ((firstPlayer != "") and (secondPlayer != "") and (result != "")) {
+    if ((name != "") and (date != "")) {
         active = true; // sanity check
-        cout << "Note: a Game was activated since assignment of players and result" << endl;
+        cout << "Note: a Tournament was activated since assignment of name and date" << endl;
     }
 
-    if (((firstPlayer == "") or (secondPlayer == "") or (result == "")) && active == true) {
+    if (((name == "") or (date == "")) && active == true) {
         active = false;
-        cout << "Note: a Game was inactivated since assignment of players and/or result is blank" << endl;
+        cout << "Note: a Tournament was inactivated since assignment of name and/or date is blank" << endl;
     }
 
 
