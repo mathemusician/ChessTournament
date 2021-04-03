@@ -11,6 +11,7 @@ private:
     string name;
     string date;
     vector <int> vectorGames; // Change to vector of Games in the future
+
 public:
     Tournament();
     Tournament(bool, string, string);
