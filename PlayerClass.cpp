@@ -72,28 +72,36 @@ bool Player::isActive() {
     return active;
 }
 
-string Player::getFirstName(string) {
+string Player::getFirstName() {
     return firstName;
 }  
 
-string Player::getMiddleName(string) {
+string Player::getMiddleName() {
     return middleName;
 }
 
-string Player::getLastName(string) {
+string Player::getLastName() {
     return lastName;
 }
 
-string Player::getClubName(string) {
+string Player::getClubName() {
     return clubName;
 }
 
-string Player::getSchoolName(string) {
+string Player::getSchoolName() {
     return schoolName;
 }
 
-string Player::getRating(string) {
+string Player::getRating() {
     return rating;
+}
+
+string Player::getName() {
+    if (middleName != "") {
+        return firstName + " " + middleName + " " lastName;
+    } else {
+        return firstName + " " + lastName;
+    }
 }
 
 // #----------Special----------#
@@ -134,12 +142,14 @@ bool Player::validRating() {
                     return false;
                 }
             } catch(const std::exception& e) {
-                cout << "rating is greater than rating cap: " << ratingCap << endl;
+                cout << "player rating not in range: 0-" << ratingCap << endl;
                 /* std::cerr << e.what() << '\n'; */
             }
             
         }
     } else {
         return false;
+        cout << getName() << " rating not valid, please check it" << endl;
     }
 }
+

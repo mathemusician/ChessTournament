@@ -31,12 +31,13 @@ public:
     
     // Getters
     bool isActive();
-    string getFirstName(string);
-    string getMiddleName(string);
-    string getLastName(string);
-    string getClubName(string);
-    string getSchoolName(string);
-    string getRating(string);
+    string getFirstName();
+    string getMiddleName();
+    string getLastName();
+    string getClubName();
+    string getSchoolName();
+    string getRating();
+    string getName();
     
     // Special
     void checkActive();
