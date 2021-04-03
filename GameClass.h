@@ -5,7 +5,7 @@ using namespace std;
 #ifndef Game_h
 #define Game_h
 
-Game() {
+class Game() {
 private:
     bool active;
     string firstPlayer;
