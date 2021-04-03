@@ -14,8 +14,18 @@ int main() {
     cout << "Welcome to the chess tournament!" << endl;
     cout << "Loading previous game data..." << endl;
 
-    Tournament newTournament(true, "Test Tournament", "03/14/2021");
-    Game newGame(true, "Magnus Carlsen", "Wesley So", "0.5-0.5");
+
+    // make tournament match pairings
+
+    Tournament newTournament("Test Tournament", "03/14/2021");
+    Game newGame("Magnus Carlsen", "Wesley So", "0.5-0.5");
+    newGame.setFirstPlayer("");
+
+    // update games and elo
+
+    // save to file and load
+
+    // make pretty with cli gui, sort of
 
 
     return 0;

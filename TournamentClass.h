@@ -13,6 +13,7 @@ private:
 
 public:
     Tournament();
+    Tournament(string, string);
     Tournament(bool, string, string);
     // make constructor?
     // make destructor

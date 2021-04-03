@@ -8,6 +8,14 @@ Tournament::Tournament() {
     date = "";
 }
 
+Tournament::Tournament(string Name, string Date) {
+    name = Name;
+    date = Date;
+    if ((name != "") and (date !="")) {
+        active = true;
+    }
+}
+
 Tournament::Tournament(bool Active, string Name, string Date) {
     active = Active;
     name = Name;
@@ -24,10 +32,16 @@ void Tournament::setActive(bool Active) {
 
 void Tournament::setName(string Name) {
     name = Name;
+    if ((name != "") and (date !="")) {
+        active = true;
+    }
 }
 
 void Tournament::setDate(string Date) {
     date = Date;
+    if ((name != "") and (date !="")) {
+        active = true;
+    }
 }
 
 // #----------Getters----------#
@@ -45,5 +59,6 @@ string Tournament::getDate() {
 }
 
 string getResults() {
+    // TODO: make results
     return "results pending...";
 }
