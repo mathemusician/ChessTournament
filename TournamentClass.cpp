@@ -1,10 +1,9 @@
-//#pragma once
 #include "TournamentClass.h"
 
 using namespace std;
 
 Tournament::Tournament() {
-    active = false;
+    active = NULL;
     name = "";
     date = "";
 }
@@ -18,7 +17,7 @@ Tournament::Tournament(bool Active, string Name, string Date) {
 // make destructor
 
 // #----------Setters----------#
-/*
+
 void Tournament::setActive(bool Active) {
     active = Active;
 }
@@ -48,4 +47,3 @@ string Tournament::getDate() {
 string getResults() {
     return "results pending...";
 }
-*/

@@ -31,5 +31,7 @@
 *.out
 *.app
 
+# My stuff
 .vscode/*
 main.dSYM/
+binaries

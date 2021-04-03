@@ -1,4 +1,3 @@
-//#pragma once
 #include <iostream>
 using namespace std;
 
@@ -15,7 +14,6 @@ private:
 public:
     Tournament();
     Tournament(bool, string, string);
-    /*
     // make constructor?
     // make destructor
     void setActive(bool);
@@ -25,7 +23,6 @@ public:
     bool isActive();
     string getDate();
     string getResults();
-    */
 };
 
 #endif

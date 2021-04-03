@@ -4,12 +4,12 @@ using namespace std;
 
 Game::Game() {
     active = NULL;
-    firstPlayer = NULL;
-    secondPlayer = NULL;
-    result = NULL;
+    firstPlayer = "";
+    secondPlayer = "";
+    result = "";
 }
 
-Game::Game(bool Active, string FirstPlayer, string secondPlayer, string Result) {
+Game::Game(bool Active, string FirstPlayer, string SecondPlayer, string Result) {
     active = Active;
     firstPlayer = FirstPlayer;
     secondPlayer = SecondPlayer;
