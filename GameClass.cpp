@@ -14,11 +14,7 @@ Game::Game(string FirstPlayer, string SecondPlayer, string Result) {
     firstPlayer = FirstPlayer;
     secondPlayer = SecondPlayer;
     result = Result;
-    if ((firstPlayer != "") and (secondPlayer != "") and (result != "")) {
-        active = true;
-    } else {
-        active = false;
-    }
+    checkActive();
 }
 
 Game::Game(bool Active, string FirstPlayer, string SecondPlayer, string Result) {
@@ -26,6 +22,7 @@ Game::Game(bool Active, string FirstPlayer, string SecondPlayer, string Result) 
     firstPlayer = FirstPlayer;
     secondPlayer = SecondPlayer;
     result = Result;
+    // No check for active so that I can run unit test for specific errors
 }
 
 // #----------Setters----------#

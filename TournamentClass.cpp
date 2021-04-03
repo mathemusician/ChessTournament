@@ -11,17 +11,14 @@ Tournament::Tournament() {
 Tournament::Tournament(string Name, string Date) {
     name = Name;
     date = Date;
-    if ((name != "") and (date !="")) {
-        active = true;
-    } else {
-        active = false;
-    }
+    checkActive();
 }
 
 Tournament::Tournament(bool Active, string Name, string Date) {
     active = Active;
     name = Name;
     date = Date;
+    // No check for active so that I can run unit test for specific errors
 }
 
 

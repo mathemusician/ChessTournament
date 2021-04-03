@@ -21,8 +21,8 @@ public:
     void setName(string);
     void setDate(string);
     // Getters
-    string getName(); // -- get name of tournament
     bool isActive();
+    string getName();
     string getDate();
     string getResults();
     // Special
