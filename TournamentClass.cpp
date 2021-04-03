@@ -13,6 +13,8 @@ Tournament::Tournament(string Name, string Date) {
     date = Date;
     if ((name != "") and (date !="")) {
         active = true;
+    } else {
+        active = false;
     }
 }
 
@@ -21,8 +23,7 @@ Tournament::Tournament(bool Active, string Name, string Date) {
     name = Name;
     date = Date;
 }
-// make constructor?
-// make destructor
+
 
 // #----------Setters----------#
 

@@ -9,7 +9,7 @@ private:
     bool active;
     string name;
     string date;
-    // vector <int> vectorGames; // Change to vector of Games in the future
+    // vector <Game> vectorGames; // Change to vector of Games in the future
 
 public:
     // TODO: make constructor? destructor

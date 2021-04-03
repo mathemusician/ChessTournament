@@ -16,6 +16,8 @@ Game::Game(string FirstPlayer, string SecondPlayer, string Result) {
     result = Result;
     if ((firstPlayer != "") and (secondPlayer != "") and (result != "")) {
         active = true;
+    } else {
+        active = false;
     }
 }
 
