@@ -9,6 +9,7 @@ To run project files:
 
 #include "TournamentClass.h"
 #include "GameClass.h"
+#include "PlayerClass.h"
 #include <iostream>
 
 using namespace std;

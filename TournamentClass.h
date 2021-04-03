@@ -16,15 +16,18 @@ public:
     Tournament();
     Tournament(string, string);
     Tournament(bool, string, string);
+    
     // Setters
     void setActive(bool);
     void setName(string);
     void setDate(string);
+    
     // Getters
     bool isActive();
     string getName();
     string getDate();
     string getResults();
+    
     // Special
     void checkActive();
 };

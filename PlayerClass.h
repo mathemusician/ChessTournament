@@ -28,6 +28,7 @@ public:
     void setClubName(string);
     void setSchoolName(string);
     void setRating(string);
+    
     // Getters
     bool isActive();
     string getFirstName(string);
@@ -36,6 +37,7 @@ public:
     string getClubName(string);
     string getSchoolName(string);
     string getRating(string);
+    
     // Special
     void checkActive();
     bool schoolOrClubExists();

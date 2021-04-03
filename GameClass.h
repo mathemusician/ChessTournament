@@ -17,16 +17,19 @@ public:
     Game();
     Game(string, string, string);
     Game(bool, string, string, string);
+    
     // Setters
     void setActive(bool);
     void setFirstPlayer(string);
     void setSecondPlayer(string);
     void setResult(string);
+    
     // Getters
     bool isActive();
     string getFirstPlayer();
     string getSecondPlayer();
     string getResult();
+    
     // Special
     void checkActive();
 };
