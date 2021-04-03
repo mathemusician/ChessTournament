@@ -7,7 +7,7 @@ using namespace std;
 
 class Tournament() {
 private:
-    bool deleted;
+    bool active;
     string name;
     string date;
     vector <int> vectorGames; // Change to vector of Games in the future
@@ -18,6 +18,7 @@ public:
     // make destructor
     void setName(string);
     void setDate(string);
+    bool isActive();
     string getName(); // -- get name of tournament
     string getDate();
     string getResults();

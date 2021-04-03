@@ -4,13 +4,13 @@
 using namespace std;
 
 Tournament::Tournament() {
-    deleted = NULL;
+    active = NULL;
     name = NULL;
     date = NULL;
 }
 
-Tournament::Tournament(bool Deleted, string Name, string Date) {
-    deleted = Deleted;
+Tournament::Tournament(bool Active, string Name, string Date) {
+    active = Active;
     name = Name;
     date = Date;
 };
@@ -22,6 +22,10 @@ void Tournament::setName(string Name) {
 
 void Tournament::setDate() {
     date = Date;
+};
+
+bool Tournament::isActive() {
+    return active;
 };
 
 string Tournament::getName() {
