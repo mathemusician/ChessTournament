@@ -1,23 +1,24 @@
+//#pragma once
 #include "TournamentClass.h"
-#include "GameClass.h"
-#include <iostream>
 
 using namespace std;
 
 Tournament::Tournament() {
-    active = NULL;
-    name = NULL;
-    date = NULL;
+    active = false;
+    name = "";
+    date = "";
 }
 
 Tournament::Tournament(bool Active, string Name, string Date) {
     active = Active;
     name = Name;
     date = Date;
-};
-// make contstructor?
+}
+// make constructor?
 // make destructor
 
+// #----------Setters----------#
+/*
 void Tournament::setActive(bool Active) {
     active = Active;
 }
@@ -26,9 +27,11 @@ void Tournament::setName(string Name) {
     name = Name;
 }
 
-void Tournament::setDate() {
+void Tournament::setDate(string Date) {
     date = Date;
 }
+
+// #----------Getters----------#
 
 bool Tournament::isActive() {
     return active;
@@ -45,3 +48,4 @@ string Tournament::getDate() {
 string getResults() {
     return "results pending...";
 }
+*/

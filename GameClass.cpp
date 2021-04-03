@@ -1,6 +1,6 @@
-#include <iostream>
-
+#include "GameClass.h"
 using namespace std;
+
 
 Game::Game() {
     active = NULL;

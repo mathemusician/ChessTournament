@@ -1,20 +1,21 @@
+//#pragma once
 #include <iostream>
-
 using namespace std;
 
-#ifndef TournamentClass_h
-#define TournamentClass_h
+#ifndef UNIQUE_TOURNAMENT
+#define UNIQUE_TOURNAMENT
 
-class Tournament() {
+class Tournament {
 private:
     bool active;
     string name;
     string date;
-    vector <int> vectorGames; // Change to vector of Games in the future
+    // vector <int> vectorGames; // Change to vector of Games in the future
 
 public:
     Tournament();
     Tournament(bool, string, string);
+    /*
     // make constructor?
     // make destructor
     void setActive(bool);
@@ -24,6 +25,7 @@ public:
     bool isActive();
     string getDate();
     string getResults();
+    */
 };
 
 #endif
