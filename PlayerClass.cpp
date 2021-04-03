@@ -33,7 +33,7 @@ Player::Player(bool Active, string FirstName, string MiddleName, string LastName
     clubName = ClubName;
     schoolName = SchoolName;
     rating = Rating;
-    // No check for active so that I can run unit test for specific errors
+    // No check for active bool so that I can run unit test for specific errors
 }
 
 // #----------Setters----------#

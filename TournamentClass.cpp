@@ -18,7 +18,7 @@ Tournament::Tournament(bool Active, string Name, string Date) {
     active = Active;
     name = Name;
     date = Date;
-    // No check for active so that I can run unit test for specific errors
+    // No check for active bool so that I can run unit test for specific errors
 }
 
 

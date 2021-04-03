@@ -22,7 +22,7 @@ Game::Game(bool Active, string FirstPlayer, string SecondPlayer, string Result) 
     firstPlayer = FirstPlayer;
     secondPlayer = SecondPlayer;
     result = Result;
-    // No check for active so that I can run unit test for specific errors
+    // No check for active bool so that I can run unit test for specific errors
 }
 
 // #----------Setters----------#
