@@ -2,8 +2,8 @@
 
 using namespace std;
 
-#ifndef Tournament_h
-#define Tournament_h
+#ifndef TournamentClass_h
+#define TournamentClass_h
 
 class Tournament() {
 private:

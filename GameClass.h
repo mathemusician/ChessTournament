@@ -2,8 +2,8 @@
 
 using namespace std;
 
-#ifndef Game_h
-#define Game_h
+#ifndef GameClass_h
+#define GameClass_h
 
 class Game() {
 private:
