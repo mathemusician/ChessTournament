@@ -1,5 +1,5 @@
-#include "Tournament.h"
-#include "Game.h"
+#include "TournamentClass.h"
+#include "GameClass.h"
 #include <iostream>
 
 using namespace std;
