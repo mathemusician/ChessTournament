@@ -1,7 +1,10 @@
 /*
-run brew install gcc
-g++-10 -Wall -Wextra main.cpp TournamentClass.cpp GameClass.cpp -o binaries/main
-./binaries/main
+To run c++ on terminal, first install gcc:
+    run brew install gcc
+
+To run project files:
+    g++-10 -Wall -Wextra main.cpp TournamentClass.cpp GameClass.cpp -o binaries/main
+    ./binaries/main
 */
 
 #include "TournamentClass.h"

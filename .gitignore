@@ -34,4 +34,4 @@
 # My stuff
 .vscode/*
 main.dSYM/
-binaries
+binaries/*
