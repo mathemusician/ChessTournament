@@ -35,3 +35,4 @@
 .vscode/*
 main.dSYM/
 binaries/*
+!binaries/blank.txt
