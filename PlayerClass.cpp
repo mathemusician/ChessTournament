@@ -11,21 +11,23 @@ Player::Player() {
     clubName = "";
     schoolName = "";
     rating = "";
+    gamesPlayed = "";
 }
 
 
-Player::Player(string FirstName, string MiddleName, string LastName, string ClubName, string SchoolName, string Rating) {
+Player::Player(string FirstName, string MiddleName, string LastName, string ClubName, string SchoolName, string Rating, string GamesPlayed) {
     firstName = FirstName;
     middleName = MiddleName;
     lastName = LastName;
     clubName = ClubName;
     schoolName = SchoolName;
     rating = Rating;
+    gamesPlayed = GamesPlayed;
     checkActive();
 }
 
 
-Player::Player(bool Active, string FirstName, string MiddleName, string LastName, string ClubName, string SchoolName, string Rating) {
+Player::Player(bool Active, string FirstName, string MiddleName, string LastName, string ClubName, string SchoolName, string Rating, string GamesPlayed) {
     active = Active;
     firstName = FirstName;
     middleName = MiddleName;
@@ -33,6 +35,7 @@ Player::Player(bool Active, string FirstName, string MiddleName, string LastName
     clubName = ClubName;
     schoolName = SchoolName;
     rating = Rating;
+    gamesPlayed = GamesPlayed;
     // No check for active bool so that I can run unit test for specific errors
 }
 
@@ -63,6 +66,11 @@ void Player::setSchoolName(string SchoolName) {
 
 void Player::setRating(string Rating) {
     rating = Rating;
+    checkActive();
+}
+
+void Player::setGamesPlayed(string GamesPlayed) {
+    gamesPlayed = GamesPlayed;
     checkActive();
 }
 
@@ -98,24 +106,28 @@ string Player::getRating() {
 
 string Player::getName() {
     if (middleName != "") {
-        return firstName + " " + middleName + " " lastName;
+        return firstName + " " + middleName + " " +lastName;
     } else {
         return firstName + " " + lastName;
     }
+}
+
+string Player::getGamesPlayed() {
+    return gamesPlayed;
 }
 
 // #----------Special----------#
 
 void Player::checkActive() {
 
-    if ((firstName != "") and (lastName != "") and schoolOrClubExists() and validRating() and (active != true)) {
+    if ((firstName != "") and (lastName != "") and schoolOrClubExists() and validRating() and validGamesPlayed() and (active != true)) {
         active = true; // sanity check
-        cout << "Note: a Game was activated since assignment of name, ELO, and/or school or club of origin" << endl;
+        cout << "Note: " << getName() << " was activated since assignment of name, ELO, games played and/or school or club of origin" << endl;
     } // sanity check
 
-    if (((firstName == "") or (lastName == "") or (rating == "") or not schoolOrClubExists() or not validRating()) && active == true) {
+    if (((firstName == "") or (lastName == "") or (rating == "") or not schoolOrClubExists() or not validRating() or not validGamesPlayed()) && active == true) {
         active = false;
-        cout << "Note: a Game was inactivated since assignment of name, ELO, and/or school or club of origin is blank" << endl;
+        cout << "Note: " << getName() << " was inactivated since assignment of name, ELO, games played and/or school or club of origin is blank" << endl;
     }
 }
 
@@ -136,20 +148,45 @@ bool Player::validRating() {
             
             try {
                 int intRating = stoi(rating);
-                if (0 <= intRating < ratingCap) {
+                if ((0 <= intRating) && (intRating < ratingCap)) {
                     return true;
                 } else {
+                    cout << "player " << getName() << " rating not in range: 0-" << ratingCap << endl;
                     return false;
                 }
             } catch(const std::exception& e) {
-                cout << "player rating not in range: 0-" << ratingCap << endl;
+                cout << "player " << getName() << " rating not a number, please check it" << endl;;
+                return false;
                 /* std::cerr << e.what() << '\n'; */
             }
             
         }
     } else {
-        return false;
         cout << getName() << " rating not valid, please check it" << endl;
+        return false;
     }
 }
 
+bool Player::validGamesPlayed() {
+    if (gamesPlayed != "") {
+        
+        try {
+            int intGamesPlayed = stoi(gamesPlayed);
+            if (0 <= intGamesPlayed) {
+                return true;
+            } else {
+                cout << "the number of games played by " << getName() << " is negative" << endl;
+                return false;
+            }
+        }
+        catch(const std::exception& e) {
+            cout << "the number of games played by " << getName() << " is not a number" << endl;
+            return false;
+            /* std::cerr << e.what() << '\n'; */
+        }
+        
+    } else {
+        cout << "the number of games played by " << getName() << " is invalid" << endl;
+        return false;
+    }
+}
